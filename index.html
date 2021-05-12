@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tic Tac Toe</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts/script.js" type="module" defer></script>
+  </head>
+  <body>
+    <main>
+      <form id="player-settings" action="">
+        <fieldset>
+          <legend>Player 1</legend>
+          <div class="input-wrapper">
+            <label for="player-1-name"> Name: </label>
+            <input class="input-field" type="text" name="player-1-name" id="player-1-name" />
+          </div>
+          <div class="input-wrapper">
+            <label for="player-1-mark"> Mark: </label>
+            <input class="input-field" type="text" name="player-1-mark" id="player-1-mark" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Player 2</legend>
+          <div class="input-wrapper">
+            <label for="player-2-name"> Name: </label>
+            <input class="input-field" type="text" name="player-2-name" id="player-2-name" />
+          </div>
+          <div class="input-wrapper">
+            <label for="player-2-mark"> Mark: </label>
+            <input class="input-field" type="text" name="player-2-mark" id="player-2-mark" />
+          </div>
+        </fieldset>
+      </form>
 
-</body>
+      <div id="game">
+        <div id="current-turn">
+          Current Turn:
+          <span id="current-turn-marker">?</span>
+        </div>
+
+        <div id="board">
+          <div class="board-field" data-index="0"></div>
+          <div class="board-field" data-index="1"></div>
+          <div class="board-field" data-index="2"></div>
+          <div class="board-field" data-index="3"></div>
+          <div class="board-field" data-index="4"></div>
+          <div class="board-field" data-index="5"></div>
+          <div class="board-field" data-index="6"></div>
+          <div class="board-field" data-index="7"></div>
+          <div class="board-field" data-index="8"></div>
+        </div>
+
+        <button id="reset">Reset</button>
+      </div>
+    </main>
+  </body>
 </html>

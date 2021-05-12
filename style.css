@@ -1,0 +1,82 @@
+main {
+  max-width: 500px;
+  width: 95%;
+  margin: 2vh auto;
+}
+
+#game {
+  margin: 1em auto;
+  width: 90%;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  aspect-ratio: 1/1;
+  margin-block: 1rem;
+}
+
+.board-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 100%);
+  outline: 1px solid lightblue;
+  font-size: clamp(0.5rem, 15vw, 5rem);
+}
+
+.board-field:hover {
+  background: hsl(0, 0%, 98%);
+  cursor: default;
+}
+
+.board-field:empty:hover {
+  background: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+
+#current-turn {
+  text-align: center;
+}
+
+#current-turn-marker {
+  display: block;
+}
+
+#reset {
+  line-height: 2;
+  width: 100%;
+}
+
+#player-settings {
+  display: flex;
+  gap: 1em 1.5em;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+}
+
+.input-wrapper {
+  flex: 1;
+  gap: 0.25em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  width: 6ch;
+}
+
+input {
+  line-height: 1.5;
+  padding-inline: 0.5em;
+  flex: 1;
+}
